@@ -71,6 +71,12 @@ body {
 }
 
 /* Kalian bisa bikin CSS di bawah sini */
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
 #hero {
   width: 100%;
   height: 100vh;
