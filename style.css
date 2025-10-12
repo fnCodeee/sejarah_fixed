@@ -1,0 +1,205 @@
+/* Hanya setting default */
+
+@import url(https://db.onlinewebfonts.com/c/63acd86114af91146cb981f667373725?family=Arges+Extra+Bold);
+@font-face {
+  font-family: "Arges";
+  font-style: oblique 12deg;
+  font-weight: extra-bold;
+  src: url("./assets/fonts/arges/arges-variable-wght-wdth-slnt.ttf");
+}
+@font-face {
+  font-family: "Arges Extra Bold";
+  src: url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.eot");
+  src: url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/63acd86114af91146cb981f667373725.svg#Arges Extra Bold")
+      format("svg");
+}
+@font-face {
+  font-family: "PPMori";
+  src: url("./assets/fonts/pp-mori/PP-Mori-default/PPMori-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "coolvetica";
+  src: url("./assets/fonts/coolvetica/coolvetica\ compressed\ hv.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Default spacing, abaikan ajah */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Barisan Font kalo mau di pake cuma tambahin nama class nya aja :
+  - font_poppins
+  - font_arges
+  - font_ppmori
+  */
+.font_poppins {
+  font-family: "Poppins", sans-serif;
+}
+.font_arges {
+  font-family: "Arges", sans-serif;
+}
+.font_ppmori {
+  font-family: "PPMori", sans-serif;
+}
+.font_coolvetica {
+  font-family: "coolvetica", sans-serif;
+  letter-spacing: 2px;
+}
+/* Color pallet */
+:root {
+  --red: #e8465e;
+  --cream: #f1eada;
+  --green: #10935b;
+  --black: #101010;
+}
+
+/* Kalian bisa bikin CSS di bawah sini */
+#hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cream);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  padding: 24px 0;
+  justify-content: center;
+}
+.navbar ul {
+  text-decoration: none;
+  display: flex;
+  gap: 64px;
+}
+.navbar > ul > li {
+  list-style: none;
+}
+.hero_content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.hero_text h1 {
+  line-height: 0.8;
+  letter-spacing: 1px;
+  font-size: 96px;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+  font-family: "coolvetica";
+  text-align: center;
+}
+.hero_content > button {
+  padding: 12px 24px;
+  background-color: var(--red);
+  color: var(--black);
+  font-weight: bolder;
+  border: none;
+}
+
+#latar_belakang {
+  /* width: 100%; */
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  padding: 0 64px;
+  gap: 64px;
+  padding-bottom: 127px;
+}
+#latar_belakang > .value_proposition {
+  width: 46%;
+  font-size: 36px;
+}
+#latar_belakang > .value_proposition > p {
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.latar_belakang_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-bottom: 40px;
+  /* padding: 0 64px */
+}
+.latar_belakang_images {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+.latar_belakang_images div {
+  border: 1px solid black;
+}
+.latar_belakang_text_container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.latar_belakang_content-02 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 73px;
+}
+.latar_belakang_text_container-02 {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#time_line {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--red);
+}
+#time_line > div {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  border-right: solid 2px var(--black);
+  border-top: solid 2px var(--black);
+  border-bottom: solid 2px var(--black);
+}
+#time_line p {
+  width: 100%;
+  text-align: start;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: bold;
+}
+.image_container {
+  padding: 64px 0;
+}
