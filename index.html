@@ -25,10 +25,18 @@
       <!-- Kalian bisa langsung ngoding di tag section ini -->
       <nav class="navbar font_poppins">
         <ul>
-          <li>Beranda</li>
-          <li>Latar Belakang</li>
-          <li>Kronologi</li>
-          <li>Tokoh</li>
+          <li>
+            <a href="#hero"> Beranda </a>
+          </li>
+          <li>
+            <a href="#latar_belakang"> Latar Belakang </a>
+          </li>
+          <li>
+            <a href="#kronologi"> Kronologi </a>
+          </li>
+          <li>
+            <a href="#Tokoh"> Tokoh </a>
+          </li>
         </ul>
       </nav>
       <div class="hero_content">
@@ -46,11 +54,17 @@
 
       <!-- css:flex column gap 64px -->
       <div class="latar_belakang_content">
-        <div class="latar_belakang_images">
+        <div class="latar_belakang_wrapper">
           <!-- IMages 3 kali -->
-          <div style="width: 171px; height: 221px"><img src="" alt="" /></div>
-          <div style="width: 371px; height: 413px"><img src="" alt="" /></div>
-          <div style="width: 171px; height: 221px"><img src="" alt="" /></div>
+          <div style="width: 171px; height: 221px">
+            <img src="./assets/images/foto-01.jpeg" alt="" />
+          </div>
+          <div style="width: 371px; height: 413px">
+            <img src="./assets/images/foto-02.jpeg" alt="" />
+          </div>
+          <div style="width: 171px; height: 221px">
+            <img src="./assets/images/foto-03.jpeg" alt="" />
+          </div>
         </div>
 
         <!-- Text + bab "Latar Belakang" css: flex row justify space between -->
@@ -73,8 +87,12 @@
 
       <!-- content gap 73px -->
       <div class="latar_belakang_content-02">
-        <div style="width: 576px; height: 437px; border: solid 1px black">
-          <img src="" alt="" />
+        <div style="width: 576px; height: 437px; overflow: hidden">
+          <img
+            style="object-fit: contain; width: 100%; height: 100%"
+            src="./assets/images/foto-05.png"
+            alt=""
+          />
         </div>
 
         <!-- flex column || gap 42px -->
@@ -97,11 +115,11 @@
     </section>
 
     <section id="time_line" class="font_coolvetica">
-      <div>
+      <!-- <div>
         <p>1997 - Awal 1998</p>
         <div class="image_container">
           <div style="width: 140px; height: 137px; border: solid 1px black">
-            <img src="" alt="" />
+            <img src="./assets/images/foto-01.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -109,7 +127,7 @@
         <p>1997 - Awal 1998</p>
         <div class="image_container">
           <div style="width: 140px; height: 137px; border: solid 1px black">
-            <img src="" alt="" />
+            <img src="./assets/images/foto-02.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -117,7 +135,7 @@
         <p>1997 - Awal 1998</p>
         <div class="image_container">
           <div style="width: 140px; height: 137px; border: solid 1px black">
-            <img src="" alt="" />
+            <img src="./assets/images/foto-03.jpeg" alt="" />
           </div>
         </div>
       </div>
@@ -125,10 +143,13 @@
         <p>1997 - Awal 1998</p>
         <div class="image_container">
           <div style="width: 140px; height: 137px; border: solid 1px black">
-            <img src="" alt="" />
+            <img src="./assets/images/foto-04.jpeg" alt="" />
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
+
+    <!-- Time line section from team -->
   </body>
+  <script src="./main.js"></script>
 </html>
