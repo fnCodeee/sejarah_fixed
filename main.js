@@ -1,33 +1,39 @@
+import data from "./data/data.js";
+
 const timeLineWrapper = document.getElementById("time_line");
+const makeId = () => crypto.randomUUID(); // atau manual generate
+console.log(crypto.randomUUID());
+
 
 const array_time_line = [
   "1997 - Awal 1998",
   "Mei 1998",
   "21 Mei 1998",
-  "Pasca 1998"
-]
+  "Pasca 1998",
+];
 for (let i = 1; i <= 4; i++) {
   // console.log(timeLineWrapper);
 
   const image_container = document.createElement("div");
   const imageWrapper1 = document.createElement("div");
   const imageWrapper2 = document.createElement("div");
-  const text = document.createElement("p");
+  const text = document.createElement("h1");
   const img = document.createElement("img");
 
   imageWrapper1.classList.add("image_container");
+  image_container.classList.add("time_line_items");
+
   imageWrapper2.style.width = "160px";
   imageWrapper2.style.height = "157px";
   imageWrapper2.style.overflow = "hidden";
 
   text.innerText = `${array_time_line[i - 1]}`;
-  console.log(array_time_line[i - 1]);
+  // console.log(array_time_line[i - 1]);
 
   img.style.width = "100%";
   img.style.height = "100%";
   img.style.objectFit = "cover";
 
-  image_container.classList.add("time_line_items");
   img.src = `./assets/images/foto-0${i}.jpeg`;
 
   imageWrapper1.appendChild(imageWrapper2);
@@ -38,6 +44,32 @@ for (let i = 1; i <= 4; i++) {
   timeLineWrapper.appendChild(image_container);
 }
 
-// timelinewrapper
-// Image wrapper1
-// Image wrapper2
+// Direct | Logic
+// Contoh array : 
+  const formatImg = [
+    { nama: "Gambar 1", ext: "jpeg" },
+    { nama: "Gambar 2", ext: "jpeg" },
+    { nama: "Gambar 3", ext: "jpeg" },
+    { nama: "Gambar 4", ext: "jpeg" },
+    { nama: "Gambar 5", ext: "jpeg" },
+  ];
+
+const cardContainer = document.getElementById("card_container");
+data.forEach((items, index) => {
+  const imgWrapperCard = document.createElement("div");
+  const cardImg = document.createElement("img");
+
+  imgWrapperCard.classList.add("card");
+  cardImg.classList.add("card-img");
+
+  const isLoopLimited = index + 1; // test: loop 1 - 5
+
+  cardImg.src = `./assets/images/foto-0${isLoopLimited}.jpeg`;
+  cardImg.src = items.image.src;
+  imgWrapperCard.appendChild(cardImg);
+  cardContainer.appendChild(imgWrapperCard);
+  imgWrapperCard.addEventListener("click", () => {
+    window.location.href = `./direct.html?id=${items.id}`
+  })
+
+});
