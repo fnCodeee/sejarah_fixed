@@ -1,146 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <!-- poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <link
-      href="https://db.onlinewebfonts.com/c/63acd86114af91146cb981f667373725?family=Arges+Extra+Bold"
-      rel="stylesheet"
-    />
+  <!-- poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Lexend:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <section id="hero">
-      <!-- Kalian bisa langsung ngoding di tag section ini -->
-      <nav class="navbar font_poppins">
-        <ul>
-          <li>
-            <a href="#hero"> Beranda </a>
-          </li>
-          <li>
-            <a href="#latar_belakang"> Latar Belakang </a>
-          </li>
-          <li>
-            <a href="#kronologi"> Kronologi </a>
-          </li>
-          <li>
-            <a href="#Tokoh"> Tokoh </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="hero_content">
-        <div class="hero_text">
-          <h1>SUARA PERUBAHAN DARI JALANAN:</h1>
-          <h1>MENGENANG REFORMASI 1998</h1>
-        </div>
-        <button class="font_ppmori">Jelajahi</button>
+  <link href="https://db.onlinewebfonts.com/c/63acd86114af91146cb981f667373725?family=Arges+Extra+Bold"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Kalian bisa langsung ngoding di tag section ini -->
+
+  <nav class="navbar font_poppins">
+    <ul>
+      <li>
+        <a href="#hero"> Beranda </a>
+      </li>
+      <li>
+        <a href="#latar_belakang"> Latar Belakang </a>
+      </li>
+      <li>
+        <a href="#kronologi"> Kronologi </a>
+      </li>
+      <li>
+        <a href="#tokoh"> Tokoh </a>
+      </li>
+    </ul>
+  </nav>
+  <section id="hero">
+    <div class="hero_content">
+      <div class="hero_text">
+        <h1>SUARA PERUBAHAN DARI JALANAN:</h1>
+        <h1>MENGENANG REFORMASI 1998</h1>
       </div>
-    </section>
-    <section id="latar_belakang">
-      <div class="value_proposition font_ppmori">
-        <p>AKAR PERUBAHAN: KRISIS DAN KETIDAKADILAN YANG MENYULUT REFORMASI</p>
-      </div>
+      <button id="button_jelajah" class="font_ppmori">Jelajahi</button>
+    </div>
+  </section>
+  <section id="latar_belakang">
+    <div class="value_proposition font_ppmori">
+      <p>AKAR PERUBAHAN: KRISIS DAN KETIDAKADILAN YANG MENYULUT REFORMASI</p>
+    </div>
 
-      <!-- css:flex column gap 64px -->
-      <div class="latar_belakang_content">
-        <div class="latar_belakang_wrapper">
-          <!-- IMages 3 kali -->
-          <div style="width: 171px; height: 221px">
-            <img src="./assets/images/foto-01.jpeg" alt="" />
-          </div>
-          <div style="width: 371px; height: 413px">
-            <img src="./assets/images/foto-02.jpeg" alt="" />
-          </div>
-          <div style="width: 171px; height: 221px">
-            <img src="./assets/images/foto-03.jpeg" alt="" />
-          </div>
+    <!-- css:flex column gap 64px -->
+    <div class="latar_belakang_content">
+      <div class="latar_belakang_wrapper">
+        <!-- IMages 3 kali -->
+        <div class="latar_belakang_image_wrapper_behind">
+          <img src="./assets/images/foto-01.jpeg" alt="" />
         </div>
-
-        <!-- Text + bab "Latar Belakang" css: flex row justify space between -->
-        <div class="latar_belakang_text_container font_poppins">
-          <!-- semibold -->
-          <p style="font-weight: 600; font-size: 32px">
-            Menjelang akhir dekade 1990-an, Indonesia menghadapi masa paling
-            kelam dalam sejarah modernnya. Krisis moneter yang melanda Asia pada
-            tahun 1997 menghantam perekonomian nasional dengan keras. Nilai
-            rupiah anjlok drastis, harga kebutuhan pokok melonjak, dan jutaan
-            orang kehilangan pekerjaan.
-          </p>
-
-          <!-- italic -->
-          <p style="font-style: italic; font-size: 20px; text-align: end">
-            Latar Belakang
-          </p>
+        <div class="latar_belakang_image_wrapper_front">
+          <img src="./assets/images/foto-02.jpeg" alt="" />
+        </div>
+        <div class="latar_belakang_image_wrapper_behind">
+          <img src="./assets/images/foto-03.jpeg" alt="" />
         </div>
       </div>
 
-      <!-- content gap 73px -->
-      <div class="latar_belakang_content-02">
-        <div style="width: 576px; height: 437px; overflow: hidden">
-          <img
-            style="object-fit: contain; width: 100%; height: 100%"
-            src="./assets/images/foto-05.jpeg"
-            alt=""
-          />
-        </div>
-
-        <!-- flex column || gap 42px -->
-        <div class="latar_belakang_text_container-02 font_ppmori">
-          <p>
-            Di tengah krisis ekonomi yang mencekik, rakyat mulai mempertanyakan
-            arah kepemimpinan Orde Baru yang telah berkuasa selama lebih dari
-            tiga dekade. Korupsi, kolusi, dan nepotisme merajalela, sementara
-            kebebasan berpendapat dibungkam.
-          </p>
-          <p>
-            Mahasiswa dari berbagai universitas di seluruh Indonesia mulai turun
-            ke jalan, menuntut reformasi total terhadap sistem pemerintahan.
-            Mereka menyuarakan perubahan, bukan sekadar mengganti pemimpin,
-            tetapi membangun tatanan yang lebih adil, transparan, dan
-            demokratis.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="time_line" class="font_coolvetica">
-      <!-- Time Line value || JSfetch -->
-    </section>
-
-    <!-- Time line section from team -->
-    <section id="tokoh">
-      <div class="text_wrapper font_ppmori">
-        <div class="title_content font_coolvetica">
-          <h1>SUARA PERUBAHAN DARI</h1>
-          <h1>KAMPUS DAN RAKYAT</h1>
-        </div>
-        <p>
-          Reformasi 1998 tidak lahir dari satu tokoh, tapi dari keberanian
-          jutaan rakyat yang bersatu menentang ketidakadilan. Di garis depan,
-          mahasiswa menjadi motor utama gerakan — mengorganisir demonstrasi,
-          menyuarakan aspirasi rakyat, dan menuntut perubahan menyeluruh
-          terhadap sistem pemerintahan Orde Baru.
+      <!-- Text + bab "Latar Belakang" css: flex row justify space between -->
+      <div class="latar_belakang_text_container font_poppins">
+        <!-- semibold -->
+        <p style="font-weight: 600">
+          Menjelang akhir dekade 1990-an, Indonesia menghadapi masa paling
+          kelam dalam sejarah modernnya. Krisis moneter yang melanda Asia pada
+          tahun 1997 menghantam perekonomian nasional dengan keras. Nilai
+          rupiah anjlok drastis, harga kebutuhan pokok melonjak, dan jutaan
+          orang kehilangan pekerjaan.
         </p>
-        <p>
-          Selain mahasiswa, sejumlah tokoh masyarakat, aktivis, jurnalis, dan
-          pemimpin politik turut memainkan peran penting dalam membuka jalan
-          bagi lahirnya era baru demokrasi Indonesia.
+
+        <!-- italic -->
+        <p style="font-style: italic; font-size: 20px; text-align: end">
+          Latar Belakang
         </p>
       </div>
-      <div id="card_container">
-        <!-- Card fetch | JS -->
-        <!-- <div class="card">
+    </div>
+
+    <!-- content gap 73px -->
+    <div class="latar_belakang_content-02">
+      <div class="latar_belakang_content-02_image_wrapper">
+        <img style="object-fit: contain; width: 100%; height: 100%" src="./assets/images/foto-05.jpeg" alt="" />
+      </div>
+
+      <!-- flex column || gap 42px -->
+      <div class="latar_belakang_text_container-02 font_ppmori">
+        <p>
+          Di tengah krisis ekonomi yang mencekik, rakyat mulai mempertanyakan
+          arah kepemimpinan Orde Baru yang telah berkuasa selama lebih dari
+          tiga dekade. Korupsi, kolusi, dan nepotisme merajalela, sementara
+          kebebasan berpendapat dibungkam.
+        </p>
+        <p>
+          Mahasiswa dari berbagai universitas di seluruh Indonesia mulai turun
+          ke jalan, menuntut reformasi total terhadap sistem pemerintahan.
+          Mereka menyuarakan perubahan, bukan sekadar mengganti pemimpin,
+          tetapi membangun tatanan yang lebih adil, transparan, dan
+          demokratis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="time_line" class="font_coolvetica">
+    <!-- Time Line value || JSfetch -->
+  </section>
+
+  <!-- Time line section from team -->
+  <section id="tokoh">
+    <div class="text_wrapper_tokoh font_ppmori">
+      <div class="title_content_tokoh font_coolvetica">
+        <h1>SUARA PERUBAHAN DARI</h1>
+        <h1>KAMPUS DAN RAKYAT</h1>
+      </div>
+      <p>
+        Reformasi 1998 tidak lahir dari satu tokoh, tapi dari keberanian
+        jutaan rakyat yang bersatu menentang ketidakadilan. Di garis depan,
+        mahasiswa menjadi motor utama gerakan — mengorganisir demonstrasi,
+        menyuarakan aspirasi rakyat, dan menuntut perubahan menyeluruh
+        terhadap sistem pemerintahan Orde Baru.
+      </p>
+      <p>
+        Selain mahasiswa, sejumlah tokoh masyarakat, aktivis, jurnalis, dan
+        pemimpin politik turut memainkan peran penting dalam membuka jalan
+        bagi lahirnya era baru demokrasi Indonesia.
+      </p>
+    </div>
+    <div id="card_container">
+      <!-- Card fetch | JS -->
+      <!-- <div class="card">
           <img src="./assets/images/foto-01.jpeg" alt="" />
         </div>
         <div class="card">
@@ -149,8 +145,19 @@
         <div class="card">
           <img src="./assets/images/foto-01.jpeg" alt="" />
         </div> -->
-      </div>
-    </section>
-  </body>
-  <script type="module" src="./main.js"></script>
+    </div>
+  </section>
+  <footer>
+    <hr style="border: 0; border-top: 1px solid #686868; margin: 24px auto;" />
+    <div class="footer_text_wrapper">
+      <p>© 2023 Reformasi 1998</p>
+      <p>
+        Created for educational purposes.
+        A study of the 1998 Indonesian Reformation in historical context.
+      </p>
+    </div>
+  </footer>
+</body>
+<script type="module" src="./main.js"></script>
+
 </html>

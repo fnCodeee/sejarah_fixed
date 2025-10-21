@@ -3,7 +3,10 @@ import data from "./data/data.js";
 const timeLineWrapper = document.getElementById("time_line");
 const makeId = () => crypto.randomUUID(); // atau manual generate
 console.log(crypto.randomUUID());
-
+const buttonJelajah = document.getElementById("button_jelajah");
+buttonJelajah.addEventListener("click", () => {
+  window.location.href = "https://id.wikipedia.org/wiki/Era_Reformasi";
+});
 
 const array_time_line = [
   "1997 - Awal 1998",
@@ -45,14 +48,14 @@ for (let i = 1; i <= 4; i++) {
 }
 
 // Direct | Logic
-// Contoh array : 
-  const formatImg = [
-    { nama: "Gambar 1", ext: "jpeg" },
-    { nama: "Gambar 2", ext: "jpeg" },
-    { nama: "Gambar 3", ext: "jpeg" },
-    { nama: "Gambar 4", ext: "jpeg" },
-    { nama: "Gambar 5", ext: "jpeg" },
-  ];
+// Contoh array :
+const formatImg = [
+  { nama: "Gambar 1", ext: "jpeg" },
+  { nama: "Gambar 2", ext: "jpeg" },
+  { nama: "Gambar 3", ext: "jpeg" },
+  { nama: "Gambar 4", ext: "jpeg" },
+  { nama: "Gambar 5", ext: "jpeg" },
+];
 
 const cardContainer = document.getElementById("card_container");
 data.forEach((items, index) => {
@@ -69,7 +72,6 @@ data.forEach((items, index) => {
   imgWrapperCard.appendChild(cardImg);
   cardContainer.appendChild(imgWrapperCard);
   imgWrapperCard.addEventListener("click", () => {
-    window.location.href = `./direct.html?id=${items.id}`
-  })
-
+    window.location.href = `./direct.html?id=${items.id}`;
+  });
 });

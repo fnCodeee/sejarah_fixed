@@ -39,10 +39,14 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "PPMori", sans-serif;
+  background-color: var(--cream);
 }
 
 /* Barisan Font kalo mau di pake cuma tambahin nama class nya aja :
@@ -87,10 +91,15 @@ a {
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
   width: 100%;
   display: flex;
-  padding: 24px 0;
+  padding: 32px 0;
   justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(10px); */
 }
 .navbar ul {
   text-decoration: none;
@@ -99,6 +108,7 @@ a {
 }
 .navbar > ul > li {
   list-style: none;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
 }
 .hero_content {
   display: flex;
@@ -120,15 +130,22 @@ a {
   font-family: "coolvetica";
   text-align: center;
 }
+.hero_content > button:active {
+  filter: brightness(0.8);
+  transform: scale(0.98);
+}
 .hero_content > button:hover {
-  background-color: #e1425a;
+  filter: brightness(0.8);
+  transform: scale(1.2);
 }
 .hero_content > button {
-  padding: 12px 24px;
+  transition: transform 0.25s ease, filter 0.2s ease;
+  padding: 12px 32px;
   background-color: var(--red);
   color: var(--black);
   font-weight: bolder;
   border: none;
+  font-size: medium;
 }
 
 #latar_belakang {
@@ -140,11 +157,11 @@ a {
   gap: 64px;
   padding-bottom: 127px;
 }
-#latar_belakang > .value_proposition {
+.value_proposition {
   width: 46%;
   font-size: 36px;
 }
-#latar_belakang > .value_proposition > p {
+.value_proposition > p {
   line-height: 32px;
   font-weight: 600;
 }
@@ -170,8 +187,15 @@ a {
   height: 100%;
 }
 .latar_belakang_wrapper div {
-  /* border: 1px solid black; */
   overflow: hidden;
+}
+.latar_belakang_image_wrapper_behind {
+  width: 171px;
+  height: 221px;
+}
+.latar_belakang_image_wrapper_front {
+  width: 371px;
+  height: 413px;
 }
 .latar_belakang_text_container {
   display: grid;
@@ -179,10 +203,19 @@ a {
   gap: 64px;
   align-items: center;
 }
+.latar_belakang_text_container {
+  font-size: 32px;
+}
 .latar_belakang_content-02 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
   gap: 73px;
+}
+.latar_belakang_content-02_image_wrapper {
+  width: 576px;
+  height: 437px;
+  overflow: hidden;
 }
 .latar_belakang_text_container-02 {
   display: flex;
@@ -224,33 +257,31 @@ a {
 #tokoh {
   padding: 64px 128px 64px 128px;
   text-align: center;
-  background-color: var(--green);
+  background-color: var(--cream);
   display: flex;
-  color: var(--cream);
   flex-direction: column;
   gap: 128px;
+  color: var(--black);
+  justify-content: center;
 }
 
-
 /* Tokoh: Text Wrapper */
-.text_wrapper p {
+.text_wrapper_tokoh p {
   font-size: 32px;
   font-weight: 500;
 }
-.text_wrapper {
+.text_wrapper_tokoh {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 64px;
 }
-.title_content h1 {
+.title_content_tokoh h1 {
   font-size: 8em;
   font-style: italic;
   line-height: 0.8;
   letter-spacing: 1px;
 }
-
-
 
 /*Tokoh: Card | CSS */
 
@@ -262,11 +293,10 @@ a {
   justify-content: center;
 }
 .card {
-  width: 28em;
-  height: 28em;
   overflow: hidden;
   box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.25s ease, filter 0.2s ease;
+  display: flex;
 }
 .card:hover {
   transform: scale(1.02);
@@ -288,14 +318,13 @@ a {
   justify-content: center;
 }
 #dir_sidebar-sticky {
-  padding-right:64px ;
-  padding-left:64px ;
+  padding-right: 64px;
+  padding-left: 64px;
   width: 100%;
   position: sticky;
   top: 0;
   left: 0;
   height: 100vh;
-  /* padding: 64px ; */
   background-color: var(--red);
   font-family: "coolvatica" sans-serif;
 }
@@ -303,10 +332,9 @@ a {
   height: 100%;
   display: grid;
   padding-top: 64px;
-  grid-template-rows: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);
 }
-
-.title_font {
+.dir_title_font {
   font-family: "coolvetica", sans-serif;
   font-style: italic;
   font-weight: 900;
@@ -317,23 +345,16 @@ a {
 #dir_description-list {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
   padding: 64px;
+  background-color: var(--cream);
 }
-
 .sidebar-sticky-img-container {
   width: 100%;
   height: 100%;
   overflow: hidden;
   /* buat di js*/
-  background-size: 110%;
+  background-size: cover;
   background-position: center;
-}
-.sidebar-sticky-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .list_items {
@@ -357,4 +378,146 @@ a {
   padding-left: 12px;
   font-size: large;
   font-family: "poppins", sans-serif;
+}
+footer {
+  padding: 24px;
+}
+.footer_text_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+hr {
+  width: 85%;
+}
+
+@media (max-width: 768px) {
+  /* Hero & navbar  */
+  .navbar {
+    display: none;
+    /* padding: 24px 0;
+    top: 0;
+    font-size: 12px; */
+  }
+  .navbar ul {
+    gap: 35px;
+  }
+  #hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .hero_content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* padding: 64px 0; */
+  }
+  .hero_text h1 {
+    font-size: 64px;
+  }
+
+  /* Responsive Direct Pages */
+  #dir_main {
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cream);
+  }
+  .sidebar-sticky-img-container {
+    width: 340px;
+    height: 240px;
+  }
+  #dir_sidebar-sticky {
+    position: inherit;
+    padding: 0;
+    height: auto;
+  }
+  .dir_title_font {
+    font-size: 64px;
+  }
+  .x-spacing-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
+  }
+  .sidebar-sticky-img-wrapper {
+    width: 100%;
+  }
+  #dir_description-list {
+    padding: 32px 0;
+    width: 90%;
+  }
+
+  /* responsive main pages */
+  #latar_belakang {
+    padding: 32px 24px;
+    gap: 0;
+  }
+  .latar_belakang_text_container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .latar_belakang_text_container,
+  .text_wrapper_tokoh p,
+  .latar_belakang_text_container-02 p {
+    font-size: 16px;
+  }
+
+  .value_proposition {
+    width: 100%;
+    padding: 24px 0;
+  }
+  .value_proposition > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .latar_belakang_content-02_image_wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .latar_belakang_content-02 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  #time_line {
+    display: flex;
+    flex-direction: column;
+  }
+  #tokoh {
+    padding: 0;
+    gap: 0;
+  }
+  .title_content_tokoh h1 {
+    font-size: 64px;
+  }
+  .text_wrapper_tokoh {
+    width: auto;
+    padding: 32px 24px;
+    gap: 32px;
+    font-size: small;
+  }
+  #card_container {
+    width: auto;
+    padding: 0 24px;
+  }
+
+  .card {
+    width: 100%; /* biar full tapi tetap proporsional */
+    height: auto; /* opsional: biar tinggi menyesuaikan isi */
+  }
+  hr {
+    width: auto;
+  }
+  .footer_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    font-size: x-small;
+  }
 }

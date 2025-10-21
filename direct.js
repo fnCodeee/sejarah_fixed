@@ -18,7 +18,7 @@ if (item) {
     </div>
     </div>
     <div>
-    <h1 class="title_font">${item.title}</h1>
+    <h1 class="dir_title_font">${item.title}</h1>
     <p>
     ${item.peran}
     </p>
